@@ -1,6 +1,6 @@
----
-import { Image } from "astro:assets";
-import photoperfil from "../../../../public/img/Big head.png";
+// Use BASE_URL so paths work on GitHub Pages (repo subpath)
+const profileSrc = `${import.meta.env.BASE_URL}img/Big head.png`;
+const contactHref = `${import.meta.env.BASE_URL}contact/`;
 ---
 
 <div class="content-presentation" id="inicio">
@@ -38,8 +38,8 @@ import photoperfil from "../../../../public/img/Big head.png";
       <p class="p-presentation">
         Computer Science professional with hands-on experience in full-stack development, UI/UX design, and applied AI. Skilled in Python, Java, JavaScript, and C++, with a strong foundation in algorithms, data structures, and cybersecurity. Experienced in building scalable systems, leading technical teams, and translating innovative ideas into functional, user-focused software solutions.
       </p>
-      <div class="container-curriculum">
-  <a href="/contact" class="a-action">Let's talk</a>
+    <div class="container-curriculum">
+  <a href={contactHref} class="a-action">Let's talk</a>
         <a
           href="https://drive.google.com/file/d/1hz2mlFx8fZnUhA8qy4lbD5Hs_EqO2m3x/view?usp=sharing"
           class="a-curriculum"
@@ -66,8 +66,8 @@ import photoperfil from "../../../../public/img/Big head.png";
     <div class="container-photo-profile">
       <div class="photo-perfil">
         <picture>
-          <!-- Use /public path directly -->
-          <img src="/img/Big head.png" alt="Ahmad Riazi" />
+          <!-- Use BASE_URL-aware public path so it works on GitHub Pages -->
+          <img src={profileSrc} alt="Ahmad Riazi" />
         </picture>
       </div>
     </div>
@@ -308,10 +308,7 @@ import photoperfil from "../../../../public/img/Big head.png";
     filter: drop-shadow(-10px -5px 10px #000) contrast(110%);
     transition: 0.3s;
   }
-
-   {
-    /* responsive*/
-  }
+  /* responsive */
   @media (max-width: 900px) {
     .container-persentation {
       flex-direction: column-reverse;
