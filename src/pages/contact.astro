@@ -40,9 +40,8 @@
             });
             const json = await res.json().catch(() => ({}));
             if (res.ok) {
-              statusEl.innerHTML = 'Message sent! <br><button id="back-btn" style="margin-top:1rem; background:#01be96; color:#fff; border:none; padding:0.5rem 1.5rem; border-radius:0.5rem; cursor:pointer;">Return to Home</button>';
+              statusEl.innerHTML = 'Message sent!<br><a id="back-btn" href="/CS-Portfolio/" style="display:inline-block;margin-top:1rem; background:#01be96; color:#fff; text-decoration:none; padding:0.5rem 1.5rem; border-radius:0.5rem; cursor:pointer;">Return to Home</a>';
               formEl.reset();
-              document.getElementById('back-btn').onclick = () => { window.location.href = '/'; };
             } else {
               statusEl.textContent = `Error: ${json.error || 'Failed to send message.'}`;
             }
