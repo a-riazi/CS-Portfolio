@@ -1,7 +1,8 @@
 import { defineConfig } from "astro/config";
-import node from "@astrojs/node";
 
+// Configure for GitHub Pages static hosting
 export default defineConfig({
-  output: "server",
-  adapter: node({ mode: "standalone" }),
+  site: "https://a-riazi.github.io/CS-Portfolio/",
+  base: "/CS-Portfolio/",
+  output: "static",
 });
