@@ -6,7 +6,7 @@ import photoperfil from "../../../../public/img/Big head.png";
 <div class="content-presentation" id="inicio">
   <div class="linear-gradient-2"></div>
   <div class="linear-gradient-1"></div>
-  <dir class="container-persentation">
+  <div class="container-persentation">
     <div class="container-text">
       <!-- <h2 class="text-hello">Hola <strong>soy</strong></h2> -->
       <h2 class="text-name">Ahmad Riazi</h2>
@@ -66,16 +66,16 @@ import photoperfil from "../../../../public/img/Big head.png";
     <div class="container-photo-profile">
       <div class="photo-perfil">
         <picture>
-          {/* If you are not using vercel, place a normal <img> tag */}
-          <Image src={photoperfil} alt="Ahmad Riazi" id="inicio" />
+          <!-- Use /public path directly -->
+          <img src="/img/Big head.png" alt="Ahmad Riazi" />
         </picture>
       </div>
     </div>
-  </dir>
+  </div>
 </div>
 
 <script>
-  const letters = document.querySelectorAll(".p-profesion");
+  const letters = document.querySelectorAll(".p-profession");
   letters.forEach((letter) => {
     letter.addEventListener("mouseenter", () => {
       toogle(letter);
@@ -110,7 +110,7 @@ import photoperfil from "../../../../public/img/Big head.png";
     );
     z-index: 0;
   }
-  .linear-gradient-2 {  import photoperfil from "../../../../public/img/photo-perfil.webp";
+  .linear-gradient-2 {
     position: absolute;
     right: 0;
     top: 0;
