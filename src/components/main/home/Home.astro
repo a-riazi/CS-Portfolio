@@ -291,8 +291,8 @@ const contactHref = `${import.meta.env.BASE_URL}contact/`;
     height: 300px;
     width: 300px;
     margin-top: 30px;
-    /* Push the profile image much more toward center on desktop */
-    margin-left: 140px;
+    /* Slight nudge toward center on desktop */
+    margin-left: 60px;
     border-radius: 50%;
     z-index: 10;
     background: rgba(255, 255, 255, 0.2);
@@ -333,12 +333,7 @@ const contactHref = `${import.meta.env.BASE_URL}contact/`;
     }
   }
 
-  /* Extra nudge on very wide screens */
-  @media (min-width: 1200px) {
-    .photo-perfil {
-      margin-left: 180px;
-    }
-  }
+  
 
   @media (max-width: 640px) {
     .p-presentation {

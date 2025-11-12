@@ -1,43 +1,87 @@
-# CS-Portfolio (Astro)
+# Ahmad Riazi — CS Portfolio
 
-Static portfolio built with Astro, configured for GitHub Pages.
+Live demo: https://a-riazi.github.io/CS-Portfolio/
 
-## Quick start
-- Install deps
+![Preview](public/img/preview-page.webp)
+
+## About
+Computer Science professional with hands-on experience in full‑stack development, UI/UX design, and applied AI. Skilled in Python, Java, JavaScript, and C++, with a strong foundation in algorithms, data structures, and cybersecurity. I enjoy building scalable systems, leading technical teams, and translating ideas into functional, user‑focused software.
+
+## Skills
+- HTML, CSS, JavaScript, TypeScript
+- React, Next.js, Astro, Vite
+- Tailwind CSS, Material UI, Styled Components, Radix UI, shadcn/ui
+- State/data: Redux, React Query, Zustand
+- Backend: Node.js, MongoDB
+- Tooling: Git, GitHub, Stripe
+
+## Featured projects
+
+> Click a thumbnail to open the live demo.
+
+|  |  |  |
+|---|---|---|
+| [![Ecommerce Stripe](public/img/ecommerce-stripe-2.webp)](https://ecommerce-stripe-763m.vercel.app/) <br/>Ecommerce Stripe | [![NexAnime](public/img/nexanime.webp)](https://nexanime.vercel.app) <br/>NexAnime | [![Cyberpunk](public/img/cyberpunk.webp)](https://preeminent-liger-266356.netlify.app/) <br/>Cyberpunk |
+| [![Store Games](public/img/store-games.webp)](https://store-games-site.netlify.app/) <br/>Store Games | [![Movie TV](public/img/movie.webp)](https://movietvsite.netlify.app/) <br/>Movie TV | [![Tasks Manager](public/img/tasks-manager.webp)](https://task-manager-ecru-chi.vercel.app/dashboard) <br/>Tasks Manager |
+
+More in the site’s Projects section.
+
+## Education
+- Computer Science Bachelor's + Master's — University of California, Riverside (09/2023–07/2027)
+- UI/UX Professional Designer — Google's Professional UI/UX course (02/2023–09/2023)
+
+## Contact
+- Website: https://a-riazi.github.io/CS-Portfolio/
+- Contact page: https://a-riazi.github.io/CS-Portfolio/contact/
+- GitHub: https://github.com/a-riazi
+- LinkedIn: https://www.linkedin.com/in/ahmad-riazi/
+
+---
+
+## Run locally
+- Install dependencies
   - `npm install`
-- Dev server
+- Start dev server
   - `npm run dev`
 - Build
   - `npm run build`
-- Preview
+- Preview production build
   - `npm run preview`
 
-## GitHub Pages deployment
-Already configured via GitHub Actions (`.github/workflows/gh-pages.yml`).
+## Deployment (GitHub Pages)
+This project is configured for GitHub Pages via Actions (`.github/workflows/gh-pages.yml`).
 
-1. Ensure `astro.config.mjs` has:
+1. Ensure `astro.config.mjs`:
    - `site: "https://a-riazi.github.io/CS-Portfolio/"`
    - `base: "/CS-Portfolio/"`
    - `output: "static"`
-2. Push to `main`.
-3. In GitHub → Settings → Pages:
-   - Build and deployment: GitHub Actions.
-4. Check the Actions tab for the deploy run.
+2. Push to `main` to trigger the workflow.
+3. In GitHub → Settings → Pages, set “Build and deployment” to GitHub Actions.
 
-Your site will be available at:
-`https://a-riazi.github.io/CS-Portfolio/`
+Notes:
+- A `.nojekyll` file is added at deploy time to avoid Jekyll parsing.
+- Public assets and links in code use `import.meta.env.BASE_URL` so they resolve under the repo subpath.
 
 ## Contact form (Formspree)
-GitHub Pages is static; use Formspree to handle submissions.
+The site is static; the contact form posts to Formspree.
 
-- In `src/pages/contact.astro`, set the form action to your Formspree endpoint:
+- In `src/pages/contact.astro`, set your Formspree endpoint:
   ```html
   <form action="https://formspree.io/f/xxxxxxxx" method="POST">
   ```
-- In Formspree, configure allowed domains and email notifications.
+- The form uses `fetch` with `Accept: application/json` to show a success message without redirecting.
 
-The form uses `fetch` with `Accept: application/json` to prevent redirects and show a success message inline.
+## Folder structure (high level)
+```
+public/
+  img/                 # Images used across the site and README
+src/
+  components/          # UI components (home, skills, studies, projects)
+  pages/               # index.astro, contact.astro
+  const/const.js       # Skills, studies, and project data
+astro.config.mjs       # Base/site config for GitHub Pages
+.github/workflows/gh-pages.yml  # Deployment pipeline
+```
 
-## Notes
-- This repo previously used a Node server (Nodemailer). That was removed to support GitHub Pages.
-- If you need a server email endpoint, deploy to Vercel/Render/Railway and restore the API route.
+## License
+MIT
