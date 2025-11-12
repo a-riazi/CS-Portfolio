@@ -13,14 +13,7 @@ Computer Science professional with hands-on experience in full‑stack developme
 - Backend: Node.js, MongoDB
 - Tooling: Git, GitHub, Stripe
 
-## Featured projects
-
-- Ecommerce Stripe — https://ecommerce-stripe-763m.vercel.app/
-- NexAnime — https://nexanime.vercel.app
-- Cyberpunk — https://preeminent-liger-266356.netlify.app/
-- Store Games — https://store-games-site.netlify.app/
-- Movie TV — https://movietvsite.netlify.app/
-- Tasks Manager — https://task-manager-ecru-chi.vercel.app/dashboard
+## Projects
 
 More in the site’s Projects section.
 
