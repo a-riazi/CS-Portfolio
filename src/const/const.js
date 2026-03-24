@@ -123,4 +123,17 @@ export const skills = [
   },
 ];
 
-export const projects = [];
+export const projects = [
+  {
+    title: "ResumeRush",
+    img: "/img/Logo.png",
+    description:
+      "AI-powered resume tailoring platform that customizes resumes for each job post, generates cover letters, supports batch processing, and optimizes content for ATS systems.",
+    link: "https://github.com/a-riazi/Resume-Rush",
+    technologies: [
+      { icon: IconKeys.react },
+      { icon: IconKeys.nodejs },
+      { icon: IconKeys.javaScript },
+    ],
+  },
+];
