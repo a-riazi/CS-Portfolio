@@ -126,7 +126,7 @@ export const skills = [
 export const projects = [
   {
     title: "ResumeRush",
-    img: "/img/Logo.png",
+    img: "/CS-Portfolio/img/Logo.png",
     description:
       "AI-powered resume tailoring platform that customizes resumes for each job post, generates cover letters, supports batch processing, and optimizes content for ATS systems.",
     link: "https://github.com/a-riazi/Resume-Rush",
