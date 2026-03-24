@@ -14,7 +14,7 @@ export interface Props {
 }
 
 const { technologies, title, img, description, link } = Astro.props;
-const imageSrc = `${import.meta.env.BASE_URL}${img}`;
+const imageSrc = `${import.meta.env.BASE_URL}${img.replace(/^\//, "")}`;
 ---
 
 <li class="li-project">
@@ -35,7 +35,7 @@ const imageSrc = `${import.meta.env.BASE_URL}${img}`;
     }
   </div>
   <div class="container-link-project">
-    <a href={link} target="_blank">See More</a>
+    <a href={link} target="_blank">Check it out</a>
   </div>
   
   </div>
@@ -120,10 +120,6 @@ const imageSrc = `${import.meta.env.BASE_URL}${img}`;
     color: #f6f6f990;
     font-size: 17px;
     font-weight: 400;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
   .description-project::first-letter {
     text-transform: capitalize;
